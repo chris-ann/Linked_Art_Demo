@@ -6,6 +6,7 @@ async function processGettyData() {
 
     // call fetch function with endpoint 
     const data = await getLinkedArt(gettyUrl);
+    console.log("Getty data:", data);
 
     // get data from JSON object
     const imageUrl = data.representation[0].id;
@@ -25,6 +26,7 @@ async function processRijksData() {
 
     // call fetch function with endpoint
     const data = await getLinkedArt(rijksUrl);
+    console.log("Rijks data:", data);
 
     // get data from JSON object
     const imageUrl = data.subject_of[0].digitally_carried_by[0].access_point[0].id;
@@ -44,6 +46,7 @@ async function processLuxData() {
 
     // call fetch function with endpoint
     const data = await getLinkedArt(luxUrl);
+    console.log("Lux data:", data);
 
     // get data from JSON object
     const imageUrl = data.representation[0].digitally_shown_by[0].access_point[0].id;
